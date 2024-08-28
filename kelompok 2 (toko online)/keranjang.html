@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #42b549;
+            color: white;
+            padding: 10px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .menu {
+            list-style-type: none;
+            display: flex;
+        }
+        .menu li {
+            margin-left: 20px;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+        }
+        .keranjang-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .item-keranjang {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .item-keranjang img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+        }
+        .item-info {
+            flex-grow: 1;
+            margin-left: 20px;
+        }
+        .item-actions {
+            display: flex;
+            align-items: center;
+        }
+        .item-actions input {
+            width: 40px;
+            text-align: center;
+        }
+        .total {
+            text-align: right;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .checkout-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #42b549;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div style="display: flex; align-items: center;">
+                <img src="tokope.png" alt="Logo Tokopedia" style="margin-right: 10px; width: 100px;">
+                <div class="logo">ATANGSTORE</div>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="kategori.html">Kategori</a></li>
+                <li><a href="promo.html">Promo</a></li>
+                <li><a href="keranjang.html">Keranjang</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="akun.html">Akun</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="keranjang-container">
+        <h1>Keranjang Belanja</h1>
+        
+        <div class="item-keranjang">
+            <img src="n1.jfif" alt="Nirvana">
+            <div class="item-info">
+                <h3>Nirvana</h3>
+                <p>Harga: Rp 100.000</p>
+            </div>
+            <div class="item-actions">
+                <button onclick="kurangiJumlah(this)">-</button>
+                <input type="number" value="1" min="1">
+                <button onclick="tambahJumlah(this)">+</button>
+                <button onclick="hapusItem(this)">Hapus</button>
+            </div>
+        </div>
+        <div class="item-keranjang">
+            <img src="n2.jfif" alt="AB_CD">
+            <div class="item-info">
+                <h3>AB_CD</h3>
+                <p>Harga: Rp 150.000</p>
+            </div>
+            <div class="item-actions">
+                <button onclick="kurangiJumlah(this)">-</button>
+                <input type="number" value="1" min="1">
+                <button onclick="tambahJumlah(this)">+</button>
+                <button onclick="hapusItem(this)">Hapus</button>
+            </div>
+        </div>
+        <div class="total">
+            Total: Rp 250.000
+        </div>
+
+        <button class="checkout-btn" onclick="checkout()">Checkout</button>
+    </div>
+
+    <script>
+        function kurangiJumlah(btn) {
+            let input = btn.nextElementSibling;
+            if (input.value > 1) {
+                input.value--;
+                updateTotal();
+            }
+        }
+
+        function tambahJumlah(btn) {
+            let input = btn.previousElementSibling;
+            input.value++;
+            updateTotal();
+        }
+
+        function hapusItem(btn) {
+            btn.closest('.item-keranjang').remove();
+            updateTotal();
+        }
+
+        function updateTotal() {
+            let total = 0;
+            document.querySelectorAll('.item-keranjang').forEach(item => {
+                let harga = parseInt(item.querySelector('.item-info p').textContent.replace('Harga: Rp ', '').replace('.', ''));
+                let jumlah = parseInt(item.querySelector('input').value);
+                total += harga * jumlah;
+            });
+            document.querySelector('.total').textContent = `Total: Rp ${total.toLocaleString('id-ID')}`;
+        }
+
+        function checkout() {
+            alert('Terima kasih telah berbelanja!');
+            // Implementasikan logika checkout di sini
+        }
+    </script>
+</body>
+</html>

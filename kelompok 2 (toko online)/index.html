@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokokelompok2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #42b549;
+            color: white;
+            padding: 10px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .menu {
+            list-style-type: none;
+            display: flex;
+        }
+        .menu li {
+            margin-left: 20px;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+        }
+        .search-bar {
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .search-bar input {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;}
+        </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div style="display: flex; align-items: center;">
+                <img src="tokope.png" alt="Logo Tokopedia" style="margin-right: 10px; width: 100px;">
+                <div class="logo">ATANGSTORE</div>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="kategori.html">Kategori</a></li>
+                <li><a href="promo.html">Promo</a></li>
+                <li><a href="keranjang.html">Keranjang</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="akun.html">Akun</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="search-bar">
+        <input type="text" placeholder="Cari produk...">
+    </div>
+
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="n1.jfif" alt="Produk 1">
+            <h3>nirvana</h3>
+            <p>Rp 100.000</p>
+            <button style="background-color: #42b549; color: white; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer;">Beli</button>
+        </div>
+        <div class="product-card">
+            <img src="n2.jfif" alt="Produk 2">
+            <h3>ab_cd</h3>
+            <p>Rp 150.000</p>
+            <button style="background-color: #42b549; color: white; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer;">Beli</button>
+        </div>
+        <div class="product-card">
+            <img src="n3.jfif" alt="Produk 3">
+            <h3>Patagonia</h3>
+            <p>Rp 200.000</p>
+            <button style="background-color: #42b549; color: white; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer;">Beli</button>
+        </div>
+        <div class="product-card">
+            <img src="n10.jpg" alt="Produk 3">
+            <h3>Patagonia</h3>
+            <p>Rp 300.000</p>
+            <button style="background-color: #42b549; color: white; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer;">Beli</button>
+        </div>
+        <div class="product-card">
+            <img src="n11.jfif" alt="Produk 3">
+            <h3>Patagonia</h3>
+            <p>Rp 400.000</p>
+            <button style="background-color: #42b549; color: white; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer;">Beli</button>
+        </div>
+        <div class="product-card">
+            <img src="n4.jfif" alt="Produk 3">
+            <h3>Giordano</h3>
+            <p>Rp 600.000</p>
+            <button style="background-color: #42b549; color: white; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer;">Beli</button>
+        </div>
+        <div class="product-card">
+            <img src="n5.jfif" alt="Produk 3">
+            <h3>Giordano</h3>
+            <p>Rp 650.000</p>
+            <button style="background-color: #42b549; color: white; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer;">Beli</button>
+        </div>
+        <div class="product-card">
+            <img src="n6.jfif" alt="Produk 3">
+            <h3>Giordano</h3>
+            <p>Rp 800.000</p>
+            <button style="background-color: #42b549; color: white; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer;">Beli</button>
+        </div>
+        <div class="product-card">
+            <img src="n7.jfif" alt="Produk 3">
+            <h3>Nirvana</h3>
+            <p>Rp 200.000</p>
+            <button style="background-color: #42b549; color: white; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer;">Beli</button>
+        </div>
+        <div class="product-card">
+            <img src="n8.jpg" alt="Produk 3">
+            <h3>stusy</h3>
+            <p>Rp 200.000</p>
+            <button style="background-color: #42b549; color: white; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer;">Beli</button>
+        </div>
+        <div class="product-card">
+            <img src="n9.jfif" alt="Produk 3">
+            <h3>Nirvana</h3>
+            <p>Rp 200.000</p>
+            <button style="background-color: #42b549; color: white; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer;">Beli</button>
+        </div>
+        <div class="product-card">
+            <img src="n12.jfif" alt="Produk 3">
+            <h3>ab_cd</h3>
+            <p>Rp 200.000</p>
+            <button style="background-color: #42b549; color: white; padding: 5px 10px; border: none; border-radius: 5px; cursor: pointer;">Beli</button>
+        </div>
+    </div>
+</body>
+</html>

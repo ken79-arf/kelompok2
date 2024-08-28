@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promo Tokokelompok2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #42b549;
+            color: white;
+            padding: 10px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .menu {
+            list-style-type: none;
+            display: flex;
+        }
+        .menu li {
+            margin-left: 20px;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+        }
+        .promo-container {
+            padding: 20px;
+        }
+        .promo-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .promo-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        .promo-details h2 {
+            margin-top: 0;
+        }
+        .promo-code {
+            background-color: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div style="display: flex; align-items: center;">
+                <img src="tokope.png" alt="Logo Tokopedia" style="margin-right: 10px; width: 100px;">
+                <div class="logo">TokopediaClone</div>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="kategori.html">Kategori</a></li>
+                <li><a href="promo.html">Promo</a></li>
+                <li><a href="keranjang.html">Keranjang</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="akun.html">Akun</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="promo-container">
+        <h1>Promo Terbaru</h1>
+        
+        <div class="promo-card">
+            <img src="n5.jfif" alt="Promo 1" class="promo-image">
+            <div class="promo-details">
+                <h2>Diskon 50% untuk Pakaian</h2>
+                <p>Dapatkan diskon hingga 50% untuk semua jenis pakaian. Berlaku hingga akhir bulan.</p>
+                <p>Kode Promo: <span class="promo-code">FASHION50</span></p>
+            </div>
+        </div>
+
+        <div class="promo-card">
+            <img src="n7.jfif" alt="Promo 2" class="promo-image">
+            <div class="promo-details">
+                <h2>Gratis Ongkir Seluruh Indonesia</h2>
+                <p>Nikmati gratis ongkir untuk semua pembelian di atas Rp 200.000. Berlaku untuk pengiriman ke seluruh Indonesia.</p>
+                <p>Kode Promo: <span class="promo-code">FREEONGKIR</span></p>
+            </div>
+        </div>
+
+        <div class="promo-card">
+            <img src="n2.jfif" alt="Promo 3" class="promo-image">
+            <div class="promo-details">
+                <h2>Cashback 10% untuk pakaian</h2>
+                <p>Dapatkan cashback 10% untuk pembelian baju AB_CD. Maksimal cashback Rp 500.000.</p>
+                <p>Kode Promo: <span class="promo-code">AB_CDGGFFA</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const promoCards = document.querySelectorAll('.promo-card');
+            promoCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const promoTitle = this.querySelector('h2').textContent;
+                    console.log('Promo diklik:', promoTitle);
+                    // Implementasikan logika untuk menerapkan promo atau menampilkan detail lebih lanjut
+                });
+            });
+        });
+    </script>
+</body>
+</html>
